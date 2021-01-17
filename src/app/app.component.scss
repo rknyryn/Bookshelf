@@ -1,0 +1,58 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.menu-header-bg {
+    height: 180px;
+    width:  350px;
+    background-color: #3880ff;
+    background: linear-gradient(90deg, #4c8dff 0%, #3171e0 100%)
+    box-shadow 0px 1px 10px rgba(98, 140, 255, 0.5);
+    transform: rotate(-15deg);
+    border-radius: 10px 10px 10px 50px;
+    margin-top: -50px;
+    margin-left: -18px;
+    margin-bottom: 60px; 
+}
+
+.header-content {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius:  50%;
+        border: 7px solid #1b1b1b;
+        margin-right: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 300;
+        color: #000000;
+    }
+
+    p {
+        font-size: 14px;
+        color: #000000;
+        font-weight: 100;
+        letter-spacing: 0.4px;
+    }
+}
+
+.menu-items {
+    margin: 0px;
+    ion-icon {
+        margin-right: 20px;
+        color: #3880ff;
+    }
+
+    ion-item{
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+}

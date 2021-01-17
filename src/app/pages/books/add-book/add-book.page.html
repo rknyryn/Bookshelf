@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Kitap Ekle</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="caret-back-outline" defaultHref="books"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="orderForm" (ngSubmit)="submit()" novalidate>
+  <div class="input-items">
+    <ion-item>
+      <ion-icon name="book-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-input clearInput placeholder="Kitap Adı" formControlName="kitapAd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input clearInput placeholder="Kitabın Yazarı" formControlName="yazarAd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select multiple="true" placeholder="Tür" cancelText="İptal" okText="Tamam" formControlName="tur">
+        <ion-select-option value="Din">Din</ion-select-option> 
+        <ion-select-option value="Felsefe ve Psikoloji">Felsefe ve psikoloji</ion-select-option> 
+        <ion-select-option value="Sosyal Bilimler">Sosyal Bilimler</ion-select-option> 
+        <ion-select-option value="Dil">Dil</ion-select-option>
+        <ion-select-option value="Temel Bilimler">Temel Bilimler</ion-select-option> 
+        <ion-select-option value="Teknoloji">Teknoloji</ion-select-option> 
+        <ion-select-option value="Din">Din</ion-select-option> 
+        <ion-select-option value="Sanat ve Yaratıcılık">Sanat ve Yaratıcılık</ion-select-option> 
+        <ion-select-option value="Edebiyat">Edebiyat</ion-select-option> 
+        <ion-select-option value="Tarih ve Coğrafya">Tarih ve Coğrafya</ion-select-option> 
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-datetime displayFormat="YYYY" placeholder="İlk Basım Yılı" formControlName="basimYili"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-input clearInput placeholder="Yayınevi" formControlName="yayinevi"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" clearInput placeholder="Sayfa Sayısı" formControlName="sayfaSayisi"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input clearInput placeholder="Dil" formControlName="dil"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button type="submit">Kaydet</ion-button>
+    </ion-item>
+    
+  </div>
+</form>
+</ion-content>

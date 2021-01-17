@@ -1,0 +1,20 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.body-content {
+    margin-top: 10%;
+    margin-left: 20%;
+    width: 60%;
+    height: 30px;
+
+    ion-button{
+        width: 100%;
+        height: 30px;
+    }
+
+    ion-icon{
+        color: #3880ff;
+        width: 90px;
+        height: 90px;
+    }
+}

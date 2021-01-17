@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Filmlerim</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-searchbar (keyup)="handleInput($event)" animated></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let movie of movies">
+      <ion-item (click)="alert(movie)" [ngStyle]="{'display': (movie['display'] != 'none')?  'block' : 'none'}">
+        <ion-label>
+          <h2>Film Adı: {{movie["ad"]}}</h2>
+          <h3>Yönetmen Adı: {{movie["yonetmen"]}}</h3>
+          <h3>Yapım Yılı: {{movie["yapimYili"]}}</h3>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteMovie(movie['id'])">Sil</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="add-movie">
+      <ion-icon name="film-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Film Ekle</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="caret-back-outline" defaultHref="movies"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="orderForm" (ngSubmit)="submit()" novalidate>
+  <div class="input-items">
+    <ion-item>
+    <ion-icon name="film-outline"></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-input clearInput placeholder="Film Adı" formControlName="filmAd"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input clearInput placeholder="Yönetmen" formControlName="yonetmenAd"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input clearInput placeholder="Senarist" formControlName="senaristAd"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-select multiple="true" placeholder="Tür" cancelText="İptal" okText="Tamam" formControlName="tur">
+      <ion-select-option value="Aksiyon">Aksiyon</ion-select-option>
+      <ion-select-option value="Belgesel">Belgesel</ion-select-option>
+      <ion-select-option value="Bilimkurgu">Bilimkurgu</ion-select-option>
+      <ion-select-option value="Dini">Dini</ion-select-option>
+      <ion-select-option value="Dramatik">Dramatik</ion-select-option>
+      <ion-select-option value="Eğitim">Eğitim</ion-select-option>
+      <ion-select-option value="Fantastik">Fantastik</ion-select-option>
+      <ion-select-option value="Gerilim">Gerilim</ion-select-option>
+      <ion-select-option value="Komedi">Komedi</ion-select-option>
+      <ion-select-option value="Korku">Korku</ion-select-option>
+      <ion-select-option value="Macera">Macera</ion-select-option>
+      <ion-select-option value="Müzikal">Müzikal</ion-select-option>
+      <ion-select-option value="Romantik">Romantik</ion-select-option>
+      <ion-select-option value="Savaş">Savaş</ion-select-option>
+      <ion-select-option value="Spor">Spor</ion-select-option>
+      <ion-select-option value="Suç">Suç</ion-select-option>
+      <ion-select-option value="Tarihi">Tarihi</ion-select-option>
+      <ion-select-option value="Western">Western</ion-select-option>
+      <ion-select-option value="Yaşam Öyküsel">Yaşam Öyküsel</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-datetime displayFormat="YYYY" placeholder="Yapım Yılı" formControlName="yapimYili"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" clearInput placeholder="Süre (dakika)" formControlName="sure"></ion-input>
+  </ion-item>
+  <ion-item>    
+    <ion-button type="submit">Kaydet</ion-button>
+  </ion-item>
+  </div>
+</form>
+</ion-content>

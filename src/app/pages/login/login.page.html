@@ -1,0 +1,25 @@
+<ion-content>
+  <form [formGroup]="orderForm" (ngSubmit)="submit()" novalidate>
+  <div class="menu-header-bg"></div>
+  <div class="header-content">
+    <img src = "../assets/icon/bookshelf.png" alt="">
+    <ion-label>
+      <h2><b>Kitaplığım</b></h2>
+    </ion-label>
+  </div>
+    <div class="body-content">
+      <ion-item>
+        <ion-input clearInput placeholder="Kullanıcı Adı" formControlName="kullaniciAdi"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input clearInput type="password" placeholder="Şifre" formControlName="sifre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit()">Giriş Yap</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button routerLink="register" fill="outline">Kayıt Ol</ion-button>
+      </ion-item>
+    </div>
+  </form>
+</ion-content>

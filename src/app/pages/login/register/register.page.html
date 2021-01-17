@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Kayıt Ol</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="caret-back-outline" defaultHref="login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="orderForm" (ngSubmit)="submit()" novalidate>
+  <div class="body-content">
+    <ion-item>
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-input clearInput placeholder="Kullanıcı Adı" formControlName="kullaniciAdi"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input clearInput type="password" placeholder="Şifre" formControlName="sifre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input clearInput type="password" placeholder="Şifre Tekrar" formControlName="sifreTekrar"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button type="submit()">Kayıt Ol</ion-button>
+    </ion-item>
+  </div>
+</form>
+</ion-content>

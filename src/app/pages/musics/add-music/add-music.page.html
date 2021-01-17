@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Müzik Ekle</ion-title>
+      <ion-buttons slot="start">
+      <ion-back-button text="" icon="caret-back-outline" defaultHref="musics"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="orderForm" (ngSubmit)="submit()" novalidate>
+  <div class="input-items">
+    <ion-item>
+    <ion-icon name="musical-notes-outline"></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-input clearInput placeholder="Albüm Adı" formControlName="albumAd"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input clearInput placeholder="Müzik Adı" formControlName="muzikAd"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input clearInput placeholder="Söz/Müzik" formControlName="sozMuzik"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-select multiple="true" placeholder="Tür" cancelText="İptal" okText="Tamam" formControlName="tur">
+      <ion-select-option value="Blues">Blues</ion-select-option>
+      <ion-select-option value="Caz">Caz</ion-select-option>
+      <ion-select-option value="Country">Country</ion-select-option>
+      <ion-select-option value="Elektronik">Elektronik</ion-select-option>
+      <ion-select-option value="Hafif Dinletiler">Hafif Dinletiler</ion-select-option>
+      <ion-select-option value="Halk">Halk</ion-select-option>
+      <ion-select-option value="Hip-Hop">Hip-Hop</ion-select-option>
+      <ion-select-option value="Caz">Caz</ion-select-option>
+      <ion-select-option value="Karayip Tarzı">Karayip Tarzı</ion-select-option>
+      <ion-select-option value="Latin">Latin</ion-select-option>
+      <ion-select-option value="Pop">Pop</ion-select-option>
+      <ion-select-option value="R&B">R&B</ion-select-option>
+      <ion-select-option value="Rock">Rock</ion-select-option>
+      <ion-select-option value="Klasik Müzik">Klasik Müzik</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-datetime displayFormat="YYYY" placeholder="Çıkış Yılı" formControlName="cikisYili"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-button type="submit">Kaydet</ion-button>
+  </ion-item>
+  </div>
+</form>
+</ion-content>
