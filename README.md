@@ -2,7 +2,8 @@
 Kişilerin kitaplıklarında bulunan; kitap, film ve müzikleri kayıt
 edebileceği ve kayıtlarını listeleyerek sahip olduklarını 
 görüntüleyebileceği bir mobil uygulama.
-(fotoğraflar)
+
+![Menu](https://github.com/rknyryn/Bookshelf/blob/main/imgs/menu.png?raw=true) ![Login](https://github.com/rknyryn/Bookshelf/blob/main/imgs/login.png?raw=true)
 
 ## Nasıl Çalıştırılır
 Dosya klasörü içerisinde:
